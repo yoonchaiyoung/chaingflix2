@@ -7,55 +7,45 @@ import Loader from "../../components/Loader";
 import Message from "../../components/Message";
 import Poster from "../../components/Poster";
 
-// import checkBox from "./CheckComponent";
-
-const Container = styled.div`
-  padding: 20px;
+const Container = styled.span`
+  font-size: 80px;
+  /* font-family: serif; */
+  font-style: italic;
+  font-weight: bold;
+  color: #f5f4a9;
+  display: flex;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 200px;
+  /* align-items: start; */
+  justify-content: center;
+  /* text-shadow: 0 0 1px #2b259c, 0 0 20px #2b259c, 0 0 30px #fff, 0 0 40px #fff,
+    0 0 70px #fff, 0 0 80px #fff, 0 0 100px #fff, 0 0 150px #fff; */
+  text-shadow: 3px 3px 4px #f20540;
 `;
 
-const HomePresenter = ({
+const HomePresenter = (
   nowPlaying,
   upcoming,
   popular,
   error,
-  loading,
-  checking,
-}) => {
+  loading
+  // checking,
+) => {
   return (
     <>
-      <Helmet>
-        <title>Movies | Chaingflix</title>
-      </Helmet>
-
       {loading ? (
         <Loader />
       ) : (
         <Container>
-          {nowPlaying && nowPlaying.length > 0 && (
-            <Section title="">
-              {nowPlaying.map((movie) => (
-                <>
-                  <Poster
-                    key={movie.id}
-                    id={movie.id}
-                    title={movie.original_title}
-                    imageUrl={movie.poster_path}
-                    rating={movie.vote_average}
-                    isMovie={true}
-                    year={
-                      movie.release_date && movie.release_date.substring(0, 4)
-                    }
-                  />
-                  {/* <input type="checkbox" /> */}
-                </>
-              ))}
-            </Section>
-          )}
-
-          {error && <Message color={"#e74c3c"} text={error} />}
+          <div>
+            <span>Welcome to ChaingFlix II</span>
+          </div>
         </Container>
       )}
-      {/* <button onClick={checkBox}>❤</button> */}
     </>
   );
 };

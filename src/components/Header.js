@@ -29,7 +29,7 @@ const Item = styled.li`
   display: inline-block;
   height: 50px;
   border-bottom: 5px solid
-    ${(props) => (props.current ? "#34db69" : "transparent")};
+    ${(props) => (props.current ? "#f5f4a9" : "transparent")};
   transition: border-bottom 0.5s ease-in-out;
 `;
 
@@ -44,7 +44,10 @@ export default withRouter(({ location: { pathname } }) => (
   <Header>
     <List>
       <Item current={pathname === "/"}>
-        <StyledLink to="/">현재 상영작</StyledLink>
+        <StyledLink to="/">홈페이지</StyledLink>
+      </Item>
+      <Item current={pathname === "/now"}>
+        <StyledLink to="/now">현재 상영작</StyledLink>
       </Item>
       <Item current={pathname === "/later"}>
         <StyledLink to="/later">개봉 예정작</StyledLink>

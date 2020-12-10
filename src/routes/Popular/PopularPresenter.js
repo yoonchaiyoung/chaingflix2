@@ -24,7 +24,7 @@ const PopularPresenter = ({
   return (
     <>
       <Helmet>
-        <title>Movies | Chaingflix</title>
+        <title>Popular | Chaingflix</title>
       </Helmet>
 
       {loading ? (

@@ -13,27 +13,27 @@ const Container = styled.div`
   padding: 20px;
 `;
 
-const LaterPresenter = ({
+const NowPresenter = ({
   nowPlaying,
   upcoming,
   popular,
   error,
   loading,
-  // checking,
+  checking,
 }) => {
   return (
     <>
       <Helmet>
-        <title>Later | Chaingflix</title>
+        <title>Now | Chaingflix</title>
       </Helmet>
 
       {loading ? (
         <Loader />
       ) : (
         <Container>
-          {upcoming && upcoming.length > 0 && (
+          {nowPlaying && nowPlaying.length > 0 && (
             <Section title="">
-              {upcoming.map((movie) => (
+              {nowPlaying.map((movie) => (
                 <>
                   <Poster
                     key={movie.id}
@@ -60,4 +60,4 @@ const LaterPresenter = ({
   );
 };
 
-export default LaterPresenter;
+export default NowPresenter;
