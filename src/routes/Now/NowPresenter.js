@@ -24,7 +24,7 @@ const NowPresenter = ({
   return (
     <>
       <Helmet>
-        <title>Now | Chaingflix</title>
+        <title>현재 상영작 | Chaingflix</title>
       </Helmet>
 
       {loading ? (

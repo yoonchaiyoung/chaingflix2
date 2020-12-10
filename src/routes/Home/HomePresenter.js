@@ -37,12 +37,16 @@ const HomePresenter = (
 ) => {
   return (
     <>
+      <Helmet>
+        <title>홈페이지 | Chaingflix</title>
+      </Helmet>
+
       {loading ? (
         <Loader />
       ) : (
         <Container>
           <div>
-            <span>Welcome to ChaingFlix II</span>
+            <span>Welcome to Chaingflix II</span>
           </div>
         </Container>
       )}

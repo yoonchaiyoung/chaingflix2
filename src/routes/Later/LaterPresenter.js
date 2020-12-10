@@ -24,7 +24,7 @@ const LaterPresenter = ({
   return (
     <>
       <Helmet>
-        <title>Later | Chaingflix</title>
+        <title>개봉 예정작 | Chaingflix</title>
       </Helmet>
 
       {loading ? (

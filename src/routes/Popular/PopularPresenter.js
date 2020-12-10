@@ -24,7 +24,7 @@ const PopularPresenter = ({
   return (
     <>
       <Helmet>
-        <title>Popular | Chaingflix</title>
+        <title>인기 상영작 | Chaingflix</title>
       </Helmet>
 
       {loading ? (
